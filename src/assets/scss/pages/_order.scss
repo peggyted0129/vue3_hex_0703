@@ -1,0 +1,109 @@
+.order {
+  padding-top: 65px;
+}
+.order-banner {
+  @include banner('~@/assets/img/order.png', 228px);
+  background-position: 85%;
+}
+.orderStep {
+  background-color: transparent;
+  text-align: center;
+}
+.step {
+  padding: 6px 20px;
+  margin: 0 5px;
+  border-radius: 3px;
+  border: 1px solid #b2b2b2;
+  color: #4f4f4f;
+  position: relative;
+  &.current {
+    border: 1px solid $sgreen;
+    font-weight: bolder;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  &.current :after {
+    opacity: 1;
+  }
+  & :after {
+    content: "";
+    position: absolute;
+    left: calc(50% - 25px);
+    bottom: 4px;
+    width: 70px;
+    height: 7px;
+    background-color: rgba(154, 149, 149, 0.6);
+    opacity: 0;
+  }
+}
+@include mobile { // 576px
+  .step {
+    padding: 14px 38px;
+    & :after {
+      bottom: 13px;
+    }
+    &.current {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+.order-info {
+  border: 1px solid #b2b2b2;
+  border-radius: 3px;
+}
+.orderPaid {
+  border: none;
+  margin-bottom: 5px;
+  list-style: none;
+  padding: 5px 15px;
+  &.paidSummary {
+    border-top: 1px solid #b2b2b2;
+  }
+}
+.totalInfo {
+  margin: 0 auto;
+  max-width: 380px;
+  // text-align: center;
+  & td {
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+.paid-title img {
+  width: 80px;
+  height: 80px;
+}
+.paidList {
+  border: none;
+  list-style: none;
+  margin: 15px 0;
+}
+.paidLine {
+  border-top: 1px solid #b2b2b2;
+}
+.paid-banner {
+  @include banner('~@/assets/img/thank.jpg', 700px)
+}
+.gopay {
+  animation: beat .7s infinite;
+  animation-name: beat;
+  transition: .3s;
+}
+@keyframes beat {
+  25% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(3px);
+  }
+  105% {
+    transform: translateY(5px);
+  }
+}
+.error-text {
+  color: #ff0066;
+  font-size: 14.4px;
+}
