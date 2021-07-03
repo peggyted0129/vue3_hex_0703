@@ -14,7 +14,7 @@
           <div class="row">
             <div class="col-6">{{ item.product.title }}</div>
             <div class="col-2 text-center">x {{ item.qty }}</div>
-            <div class="col-4 text-end">NT$ {{ item.final_total }}</div>
+            <div class="col-4 text-end">NT$ {{ getDiscount(item.final_total) }}</div>
           </div>
         </li>
         <li class="orderPaid paidSummary mt-4 pt-7">
@@ -76,7 +76,7 @@
               <div class="row">
                 <div class="col-6">{{ item.product.title }}</div>
                 <div class="col-2 text-center">x {{ item.qty }}</div>
-                <div class="col-4 text-end">NT$ {{ item.final_total }}</div>
+                <div class="col-4 text-end">NT$ {{ getDiscount(item.final_total) }}</div>
               </div>
             </li>
             <li class="paidList">
@@ -140,6 +140,10 @@ export default {
     indate (time) {
       const date = new Date(time * 1000)
       return date.toLocaleDateString()
+    },
+    getDiscount (totalPrice) {
+      const discount = Math.round(totalPrice)
+      return discount
     },
     getOrder () {
       this.$store.dispatch('getOrder', this.orderId)

@@ -25,7 +25,7 @@
                   <div class="pt-md-9 ms-md-3">x {{ item.qty }}</div>
                 </div>
                 <div class="col-6 col-md-4 pt-md-9 text-end">
-                  <div class="orderTotal pe-3">NT ${{ item.final_total }}</div>
+                  <div class="orderTotal pe-3">NT ${{ getDiscount(item.final_total) }}</div>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="col-md-6">
           <label for="手機" class="form-label">收件人手機<span class="text-danger" style="padding-left: 3px;">*</span></label>
-          <Field v-model="form.user.tel" type="tel" :rules="isPhone" :class="{ 'is-invalid': errors['手機'] }" class="form-control" id="手機" name="手機" placeholder="請輸入手機" />
+          <Field v-model="form.user.tel" type="tel" rules="required" :class="{ 'is-invalid': errors['手機'] }" class="form-control" id="手機" name="手機" placeholder="請輸入手機" />
           <error-message name="手機" class="error-text invalid-feedback"></error-message>
         </div>
         <div class="col-md-6">
