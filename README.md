@@ -27,11 +27,15 @@
   - 購物車無產品時不建議發出結帳請求
 
 - Week6 6/22 注意事項
-  - 將購物車商品數量使用 session 記錄
+  - 將購物車商品數量使用 localStorage 記錄
 
 - Week7 6/28 注意事項
-  - 在送出顧客 Form 資料後，才把 session 購物車記錄清除
+  - 在送出顧客 Form 資料後，才把 localStorage 購物車記錄清除
+  - 注意表單驗證有無 schema 的寫法
+    - 使用 schema 寫法 : OrderBuying.vue 頁
+    - 無使用 schema 寫法 : BackShopping.vue 頁
   - 在 postCarts 方法部分，要注意 "非同步的問題"
+
 
 ## Project setup
 ```
@@ -44,6 +48,7 @@ npm run serve
 ```
 
 ### Compiles and minifies for production
+#### npm run build 後加入 GitHub 要記得修改根目錄下的 vue.config.js 檔的相對路徑才能顯示畫面 !!
 ```
 npm run build
 ```
