@@ -31,6 +31,27 @@ const routes = [
         component: () => import('@/views/front/Product')
       },
       {
+        path: '/news',
+        component: () => import('@/components/front/News'),
+        children: [
+          {
+            path: 'news_one', // 最新消息
+            name: 'NewsOne',
+            component: () => import('@/views/front/NewsOne')
+          },
+          {
+            path: 'news_two',
+            name: 'NewsTwo',
+            component: () => import('@/views/front/NewsTwo')
+          },
+          {
+            path: 'news_three',
+            name: 'NewsThree',
+            component: () => import('@/views/front/NewsThree')
+          }
+        ]
+      },
+      {
         path: '/checkout',
         component: () => import('@/components/front/Checkout'),
         children: [
@@ -58,6 +79,12 @@ const routes = [
     component: () => import('@/components/back/BackStage'),
     children: [
       {
+        path: 'shopping',
+        name: 'Backshopping',
+        component: () => import('@/views/back/BackShopping'),
+        meta: { requiresAuth: true }
+      },
+      {
         path: 'products',
         name: 'BackProducts',
         component: () => import('@/views/back/BackProducts'),
@@ -68,24 +95,20 @@ const routes = [
         name: 'BackCoupon',
         component: () => import('@/views/back/BackCoupon'),
         meta: { requiresAuth: true }
-      }
-    ]
-  },
-  {
-    path: '/backstage',
-    component: () => import('@/components/back/BackStage'),
-    children: [
-      {
-        path: 'shopping',
-        name: 'Backshopping',
-        component: () => import('@/views/back/BackShopping')
       },
       {
         path: 'orders', // 訂單列表
         name: 'Backorders',
-        component: () => import('@/views/back/BackOrders')
+        component: () => import('@/views/back/BackOrders'),
+        meta: { requiresAuth: true }
       }
     ]
+  },
+  { // 重新導向: 預設為首頁
+    path: '/:pathMatch(.*)*',
+    redirect: {
+      name: 'Home'
+    }
   }
 ]
 

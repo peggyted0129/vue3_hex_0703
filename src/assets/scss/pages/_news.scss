@@ -1,0 +1,302 @@
+/*  news : layout 部分  */
+.news-banner {
+  @include banner('~@/assets/img/news_banner.png', 230px);
+}
+.news-title {
+  color: #fff;
+  & h1 {
+    position: relative;
+    font-size: 40px;
+    &::after {
+      height: 1px;
+      width: 20px;
+      background-color: #fff;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -10px;
+    }
+  }
+  & span {
+    font-size: 18px;
+  }
+}
+/*     */
+.time {
+  position: relative;
+  & p {
+    font-size: 15px;
+    padding: 8px 12px;
+    letter-spacing: 2px
+  }
+  & h5 {
+    letter-spacing: 0rem;
+  }
+  &::after {
+    content: "";
+    display: block;
+    background: $sgreen;
+    position: absolute;
+    height: 1px;
+    width: 280px;
+    top: 80px;
+  }
+}
+.listed {
+  font-size: 18px;
+  color: #FFF;
+  padding: 2px 0px;
+  background-color:#333;
+  width: 270px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 4px auto;
+}
+.news-head {
+  line-height: 1.7;
+  font-size: 18px;
+  position: absolute;
+  padding: 1em 0;
+
+  &::before, &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 28px;
+    height: 24px;
+    background: no-repeat 50% 50% url('~@/assets/img/news/quote.png');
+    background-size: contain;
+  }
+  &::before {
+    right: 93%;
+    top: -10px;
+  }
+  &::after {
+    left: 93%;
+    bottom: -10px;
+    transform: rotate(180deg);
+  }
+}
+.news-txt {
+  font-weight: 300;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.9rem;
+  font-weight: bolder;
+}
+.news-buy {
+  margin: 8px 0;
+  padding-left: 19px;
+  & li {
+    list-style-type: square;
+    &::marker {
+      color: $sgreen;
+    }
+  }
+}
+@include mobile { // 576px
+  .news-banner {
+    @include banner('~@/assets/img/news_banner.png', 280px);
+  }
+  .time h5 {
+    letter-spacing: 0.1rem;
+  }
+  .time::after {
+    width: 500px;
+    top: 50px;
+  }
+  .news-head::before {
+    right: 100%;
+    top: -20px;
+    margin-left: 20px;
+  }
+  .news-head::after {
+    left: 100%;
+    bottom: -20px;
+    margin-right: 20px;
+  }
+}
+@include mobile { // 768px
+  .news-head::before {
+    right: 102%;
+    top: -40px;
+  }
+  .news-head::after {
+    left: 102%;
+    bottom: -40px;
+  }
+}
+/* RWD Youtube 以及 Vimeo */
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity .25s cubic-bezier(0,0,0.2,1);
+}
+/* tag */
+.tag {
+  max-width: 1024px;
+  margin: 20px auto;
+}
+.tag-link {
+  margin: 10px 10px;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 .75em;
+  border-radius: 25px;
+  border: 1px solid $theme;
+  background: rgba(255,255,255,0.85);
+  color: $theme;
+  font-size: .8125em;
+  white-space: nowrap;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) .3s;
+  &:hover {
+    color: $white;
+    background: $sgreen;
+  }
+}
+
+/*  lottery test  */
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+.coupon-front {
+  padding: 20px 0;
+  &-header {
+    text-align: center;
+    h2 {
+      font-family: "Luckiest Guy", cursive;
+      color: $sgreen;
+      font-size: 45px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-weight: bold;
+      font-size: 18px;
+      color: lighten($secondary, 10);
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+  }
+  &-game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 326px;
+    height: 326px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: $sgreen;
+    background-size: 326px 326px;
+    position: relative;
+    .bg-main {
+      position: absolute;
+      left: 4.5px;
+      top: 4px;
+      width: 317px;
+      height: 317px;
+      background: #ddd;
+      background-size: 317px 317px;
+    }
+    .bg-sec {
+      position: absolute;
+      left: 4.5px;
+      top: 4px;
+      width: 317px;
+      height: 317px;
+      background: #eee;
+      background-size: 317px 317px;
+    }
+    .start {
+      position: relative;
+      display: flex;
+      top: 2px;
+      left: 2px;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      border-radius: 8px;
+      border: 5px solid rgb(255, 62, 87);
+      background-size: 86px 86px;
+      color: rgb(255, 62, 87);
+      cursor: pointer;
+      letter-spacing: 3px;
+      transition: all 0.3s;
+      &:hover {
+        color: #fff;
+        background-color: rgb(255, 62, 87);
+      }
+      p {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    ul {
+      li {
+        position: absolute;
+        width: 86px;
+        height: 86px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(255, 255, 255);
+        border: 2px solid $sgreen;
+        border-radius: 8px;
+        p {
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: lighten($secondary, 10);
+        }
+      }
+      li:nth-child(1) {
+        left: 25px;
+        top: 25px;
+      }
+      li:nth-child(2) {
+        left: 120px;
+        top: 25px;
+      }
+      li:nth-child(3) {
+        left: 215px;
+        top: 25px;
+      }
+      li:nth-child(4) {
+        left: 215px;
+        top: 120px;
+      }
+      li:nth-child(5) {
+        left: 215px;
+        top: 215px;
+      }
+      li:nth-child(6) {
+        left: 120px;
+        top: 215px;
+      }
+      li:nth-child(7) {
+        left: 25px;
+        top: 215px;
+      }
+      li:nth-child(8) {
+        left: 25px;
+        top: 120px;
+      }
+      .active {
+        background: #fff2b1;
+      }
+    }
+  }
+}

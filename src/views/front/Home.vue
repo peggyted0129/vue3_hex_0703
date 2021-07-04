@@ -34,40 +34,40 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             <div class="card mews-card">
-              <img src="../../assets/img/banner3.jpg" class="card-img-top" alt="...">
+              <img src="../../assets/img/news/news_one7.png" class="card-img-top" alt="...">
               <div class="card-body mx-5" style="height: 155px">
-                <h5 class="card-title fw-bolder">在家安心購物，宅配免費</h5>
+                <h5 class="card-title fw-bolder">偷一抹時光，偷一步美麗</h5>
+                <p class="card-text">偷走美麗悠閒！偷走時光危肌 !</p>
+                <p class="my-5"><small class="text-lgreen">發佈日期 | 2021-07-05</small></p>
+              </div>
+              <div class="card-footer mx-5">
+                <router-link :to="{ name: 'NewsOne' }" class="btn btn-hgray hvr-bounce-to-right">了解更多</router-link>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+            <div class="card mews-card">
+              <img src="../../assets/img/discount.jpg" class="card-img-top" alt="...">
+              <div class="card-body mx-5" style="height: 155px">
+                <h5 class="card-title fw-bolder">在家安心購物，抽折扣</h5>
                 <p class="card-text">防疫有你有我！宅在家也能安心購物</p>
-                <p class="my-5"><small class="text-lgreen">發佈日期 | 2021-05-26</small></p>
+                <p class="my-5"><small class="text-lgreen">發佈日期 | 2021-08-01</small></p>
               </div>
               <div class="card-footer mx-5">
-                <a href="#" class="btn btn-hgray hvr-bounce-to-right">了解更多</a>
+                <router-link :to="{ name: 'NewsTwo' }" class="btn btn-hgray hvr-bounce-to-right">了解更多</router-link>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6 col-12 mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
             <div class="card mews-card">
-              <img src="../../assets/img/banner3.jpg" class="card-img-top" alt="...">
+              <img src="../../assets/img/news/news_one8.png" class="card-img-top" alt="...">
               <div class="card-body mx-5" style="height: 155px">
-                <h5 class="card-title fw-bolder">粉絲真心告白認證</h5>
-                <p class="card-text">粉絲大聲說 ....， 肌膚真的改善了</p>
-                <p class="my-5"><small class="text-lgreen">發佈日期 | 2021-05-26</small></p>
+                <h5 class="card-title fw-bolder">運動者的洗沐聖品!!</h5>
+                <p class="card-text">運動愛美，從每一個小小細節堆砌而成...</p>
+                <p class="my-5"><small class="text-lgreen">發佈日期 | 2021-09-26</small></p>
               </div>
               <div class="card-footer mx-5">
-                <a href="#" class="btn btn-hgray hvr-bounce-to-right">了解更多</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
-            <div class="card mews-card">
-              <img src="../../assets/img/banner3.jpg" class="card-img-top" alt="...">
-              <div class="card-body mx-5" style="height: 155px">
-                <h5 class="card-title fw-bolder">限量品 - 好評回歸上市</h5>
-                <p class="card-text">[ 香氛沐浴乳 ] 全台百貨櫃位、官方購物限量販售!</p>
-                <p class="my-5"><small class="text-lgreen">發佈日期 | 2021-05-26</small></p>
-              </div>
-              <div class="card-footer mx-5">
-                <a href="#" class="btn btn-hgray hvr-bounce-to-right">了解更多</a>
+                <router-link :to="{ name: 'NewsThree' }" class="btn btn-hgray hvr-bounce-to-right">了解更多</router-link>
               </div>
             </div>
           </div>

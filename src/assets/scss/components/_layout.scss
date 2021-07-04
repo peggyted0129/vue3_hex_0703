@@ -63,12 +63,17 @@
     z-index: 999;
     & li a {
       color: $streak;
-    }
-    & li a:hover {
-      color: $white;
+      &:hover {
+        color: $white;
+      }
     }
   }
   .nav-link:hover ~ .navbar-menu {
+    opacity: 1;
+    transition: .5s ease-out all;
+    transform: translateY(-20px);
+  }
+  .menuShow { // 用滑鼠事件控制 @mouseover="mouseOver"
     opacity: 1;
     transition: .5s ease-out all;
     transform: translateY(-20px);

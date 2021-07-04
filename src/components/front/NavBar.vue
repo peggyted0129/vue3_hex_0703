@@ -27,28 +27,28 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" @click="navScrollUp">購買地點</a>
+            <router-link to="/cart" class="nav-link" @click="navScrollUp">購買地點</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex" @click="dropdownOpen('isSkinDropdown')" href="#">
+            <router-link :to="{ name: 'NewsOne' }" class="nav-link d-flex" @click.prevent="dropdownOpen('isSkinDropdown')">
               <span>美肌顧問</span>
               <span class="ms-1 arrowDown-pad d-none d-md-block"><i class="fas fa-chevron-down"></i></span>
               <span v-if="isSkinDropdown" class="ms-1 addIcon-phone d-md-none d-block ms-auto"><i class="fas fa-minus"></i></span>
               <span v-else class="ms-1 addIcon-phone d-md-none d-block ms-auto"><i class="fas fa-plus"></i></span>
-            </a>
-            <!-- 手機版 : 手風琴效果 -->
+            </router-link>
+            <!-- 手機版 : 手風琴效果nav-link-->
             <ul class="dropdown-open js-skin-open d-md-none" :class="{ 'd-block' : isSkinDropdown , active : isSkinDropdown }">
-              <li class="mb-5">
-                <a href="#" class="ms-5 text-white">[ 小資美學堂 ] 肌膚 你不知道的奧秘</a>
+              <li class="mb-5" @click="navScrollUp">
+                <router-link :to="{ name: 'NewsOne' }" class="ms-5 text-white">[ 小資美學堂 ] 肌膚 你不知道的奧秘</router-link>
               </li>
-              <li>
-                <a href="#" class="ms-5 text-white">[ 小資美學堂 ] 肌膚 你不知道的奧秘</a>
+              <li @click="navScrollUp">
+                <router-link :to="{ name: 'NewsOne' }" class="ms-5 text-white">[ 小資美學堂 ] 肌膚 你不知道的奧秘</router-link>
               </li>
             </ul>
             <!-- 電腦版 -->
             <ul class="navbar-menu navbar-skin-menu bg-theme p-7 ms-3 d-none d-md-block">
               <li class="mb-5">
-                <a href="#">[ 小資美學堂 ] 肌膚 你不知道的奧秘</a>
+                <router-link :to="{ name: 'NewsOne' }">[ 小資美學堂 ] 肌膚 你不知道的奧秘</router-link>
               </li>
               <li>
                 <a href="#">[ 小資美學堂 ] 肌膚 你不知道的奧秘</a>
@@ -83,6 +83,9 @@ export default {
     }
   },
   methods: {
+    // mouseOver () {
+    //   $('.navbar-menu').addClass('menuShow')
+    // },
     navScrollUp () { // 在漢堡選單狀態點選<a>，會自動收闔選單並導向正確路徑
       // this.dropdownOpen('togglerBtn')
       $('.navbar-collapse').removeClass('show')

@@ -44,3 +44,11 @@
   outline: 0;
   box-shadow: none;
 }
+
+/* 首頁的最新消息 card */
+@include pad {
+  .mews-card img {
+    width: 355px;
+    height: 236px;
+  }
+}

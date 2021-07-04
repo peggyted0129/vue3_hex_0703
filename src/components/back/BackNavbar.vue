@@ -21,10 +21,10 @@
             <router-link to="/admin/coupon" class="nav-link h5">酷碰券</router-link>
           </li>
           <li class="nav-item ms-2">
-            <router-link to="/backstage/shopping" class="nav-link h5">模擬頁面</router-link>
+            <router-link to="/admin/shopping" class="nav-link h5">模擬頁面</router-link>
           </li>
           <li class="nav-item ms-2">
-            <router-link to="/backstage/orders" class="nav-link h5">訂單列表</router-link>
+            <router-link to="/admin/orders" class="nav-link h5">訂單列表</router-link>
           </li>
         </ul>
         <div class="ms-auto">
