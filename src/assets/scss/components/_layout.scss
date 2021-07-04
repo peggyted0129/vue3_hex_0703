@@ -54,13 +54,25 @@
 .navbar-scroll .nav-link::before {
   background: $white;
 }
+
+/*  test  */
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/*  test  */
+
+.navbar-menu {
+  display: none;
+}
 @include pad {
   .navbar-menu {
     opacity: 0;
     position: absolute;
     top: 131%;
     transition: all .5s ease;
-    z-index: 999;
     & li a {
       color: $streak;
       &:hover {
@@ -70,6 +82,7 @@
   }
   .nav-link:hover ~ .navbar-menu {
     opacity: 1;
+    display: block;
     transition: .5s ease-out all;
     transform: translateY(-20px);
   }

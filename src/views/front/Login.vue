@@ -76,7 +76,7 @@ export default {
         const { expired, token } = res.data
         document.cookie = `vue3Token=${token}; expires=${new Date(expired)}; path=/`
         vm.isLoading = false
-        vm.$router.push('/admin/products')
+        vm.$router.push('/admin/shopping')
         if (!res.data.success) {
           vm.$swal({ title: res.data.message, icon: 'error' })
         }
