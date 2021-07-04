@@ -60,12 +60,12 @@
           </tr>
           <tr>
             <td>優惠折抵</td>
-            <td class="text-end">- NT ${{ cart.total - cart.final_total }}</td>
+            <td class="text-end">- NT ${{ getDiscount(cart.total - cart.final_total) }}</td>
           </tr>
           <tr>
             <td v-if="cart.total !== cart.final_total" class="h5 fw-bolder">應付金額 (已套用優惠券)</td>
             <td v-if="cart.total === cart.final_total" class="h5 fw-bolder">應付金額 (未使用優惠券)</td>
-            <td class="h5 fw-bolder text-sgreen text-end">NT ${{ cart.final_total }}</td>
+            <td class="h5 fw-bolder text-sgreen text-end">NT ${{ getDiscount(cart.final_total) }}</td>
           </tr>
         </tbody>
       </table>
@@ -75,8 +75,7 @@
         </router-link>
       </div>
       <div>
-        <p class="h6 text-sgreen ms-5 fw-bolder">( 優惠券 8 折碼 : HappyCoupon )</p>
-        <p class="h6 text-sgreen ms-5 fw-bolder">( 優惠券 7 折碼 : CoolCoupon )</p>
+        <p class="h6 text-sgreen ms-5 fw-bolder">( 優惠券 8 折碼 : CoolCoupon8 )</p>
       </div>
     </div>
   </div>

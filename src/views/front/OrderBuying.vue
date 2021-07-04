@@ -34,7 +34,7 @@
         <li class="border-0 mb-0">
           <div class="row">
             <div class="col-6 text-end"> 共 {{ cartLength }} 項</div>
-            <div class="col-6 ps-0 pe-7 text-end text-sgreen fw-bolder">總計金額 NT$ {{ cart.final_total }}</div>
+            <div class="col-6 ps-0 pe-7 text-end text-sgreen fw-bolder">總計金額 NT$ {{ getDiscount(cart.final_total) }}</div>
           </div>
         </li>
       </ul>

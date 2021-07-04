@@ -74,7 +74,8 @@
     transform: translateY(-20px);
   }
   .menuShow { // 用滑鼠事件控制 @mouseover="mouseOver"
-    opacity: 1;
+    // opacity: 1;
+    display: block;
     transition: .5s ease-out all;
     transform: translateY(-20px);
   }
