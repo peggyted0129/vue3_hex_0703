@@ -79,7 +79,7 @@
       <div class="container h-100">
         <div class="row align-items-center h-100 w-100 ms-0">
           <div class="col-12 col-md-10 col-lg-8 col-xl-7 order-2 order-md-1">
-            <strong class="video-title h1 fw-bolder text-white mx-10 mx-md-0">德國施巴 pH5.5 原創領導品牌</strong>
+            <strong class="video-title h1 fw-bolder text-white mx-10 mx-md-0">Sebamed pH5.5 原創領導品牌</strong>
           </div>
           <div class="col-12 col-md-2 col-lg-4 col-xl-5 order-1 order-md-2 d-flex flex-column align-items-center">
             <a href="https://www.sebamed.com.tw/video/sebamed.mp4" class="video-btn hvr-buzz-out zindex-1" target="_blank">
@@ -112,6 +112,37 @@
           </div>
           <div class="col-md-3">
             <img class="about-img-bottom w-100" data-aos="fade-up" src="../../assets/img/about_img1.jpg" alt="about_img">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- contact -->
+    <div class="contact-wrap">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-5 left">
+            <h3 class="fw-bolder">聯絡我們</h3>
+            <p class="fw-bolder">如有任何問題或商品合作洽談，請留下訊息讓我們知道~! 若是對商店有任何建議與回饋，也歡迎留言，讓我們能夠為您提供更好的購物體驗!</p>
+          </div>
+          <div class="col-md-7 right">
+            <div class="contactPic"></div>
+            <Form class="row contact mt-5 mx-auto" v-slot="{ errors }">
+              <div class="col-12 mb-5">
+                <Field type="text" class="form-control" id="姓名" name="姓名" :class="{ 'is-invalid': errors['姓名'] }" rules="required" placeholder="您的姓名或稱呼" />
+                <error-message name="姓名" class="invalid-feedback"></error-message>
+              </div>
+              <div class="col-12 mb-5">
+                <Field type="email" :class="{ 'is-invalid': errors['email'] }" rules="email|required" class="form-control" id="email" name="email" placeholder="您的 email" />
+                <error-message name="email" class="invalid-feedback"></error-message>
+              </div>
+              <div class="col-12 mb-5">
+                <textarea type="text" name="留言" id="留言" class="form-control" :class="{ 'is-invalid': errors['留言'] }" rules="required" placeholder="請留下您寶貴的意見"></textarea>
+                <error-message name="留言" class="invalid-feedback"></error-message>
+              </div>
+              <div class="col-12 text-end">
+                <button type="button" class="btn btn-hgray hvr-bounce-to-right">確認送出</button>
+              </div>
+            </Form>
           </div>
         </div>
       </div>

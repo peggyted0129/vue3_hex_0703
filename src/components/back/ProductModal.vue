@@ -17,7 +17,7 @@
           <div class="col-sm-4">
             <div class="form-group">
               <label for="imageUrl">主要圖片</label>
-              <input v-model="tempProduct.imageUrl" type="text" class="form-control my-3" placeholder="請輸入圖片連結">
+              <input v-model="tempProduct.imageUrl" id="imageUrl" type="text" class="form-control my-3" placeholder="請輸入圖片連結">
             </div>
             <div class="form-group">
               <label for="customFile">或 上傳圖片

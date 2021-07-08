@@ -194,3 +194,25 @@
     font-size: 24px;
   }
 }
+/* contact */ 
+.contact-wrap {
+  overflow: hidden;
+  padding: 80px;
+}
+.left p {
+  letter-spacing: 1px;
+  padding: 5px;
+  margin-top: 30px;
+  color: #4f4f4f;
+  line-height: 2;
+}
+.contact {
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 10px;
+  & textarea {
+    height: 150px;
+  }
+}

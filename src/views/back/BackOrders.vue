@@ -56,7 +56,7 @@ export default {
     },
     getAllOrders (currentPage = 1) {
       const vm = this
-      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/orders?page=${currentPage}`
+      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/orders?page=${currentPage}`
       vm.$store.dispatch('updateLoading', true)
       vm.$http.get(url).then((response) => {
         vm.orders = response.data.orders

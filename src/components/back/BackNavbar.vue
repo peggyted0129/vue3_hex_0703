@@ -52,6 +52,9 @@ export default {
       const api = `${process.env.VUE_APP_APIPATH}/logout`
       vm.$http.post(api).then((res) => {
         if (res.data.success) {
+          // 直接清除該 cookie 的值、到期日，這樣就是刪除 cookie
+          document.cookie = 'hexToken=; expires=; path=/'
+          this.$swal({ title: res.data.message, icon: 'success' })
           vm.isLoading = false
           vm.$router.push('/login')
         }

@@ -61,7 +61,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
-            <ul class="animate__animated animate__slideInUp dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <ul class="animate__animated animate__slideInUp dropdown-menu dropdown-menu-dark my-0" aria-labelledby="navbarDarkDropdownMenuLink">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -152,3 +152,18 @@ export default {
   }
 }
 </script>
+<style scoped>
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  50% {
+    transform: translate3d(0, 50%, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(0, 0%, 0);
+  }
+}
+</style>

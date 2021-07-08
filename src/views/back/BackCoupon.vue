@@ -66,7 +66,7 @@
             </div>
             <div class="form-group">
               <label for="price">折扣百分比</label>
-              <input type="number" class="form-control my-3" id="price"
+              <input type="number" class="form-control my-3" id="price" min="1" max="100"
                 v-model.number="tempCoupon.percent" placeholder="請輸入折扣百分比">
             </div>
             <div class="form-group mt-7">
@@ -184,7 +184,7 @@ export default {
       const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/coupon/${id}`
       vm.$store.dispatch('updateLoading', true)
       vm.$http.delete(url).then((response) => {
-        vm.toastTopEnd(response.data.message, 'error')
+        vm.toastTopEnd(response.data.message, 'success')
         vm.$store.dispatch('updateLoading', false)
         vm.getCoupons()
       })

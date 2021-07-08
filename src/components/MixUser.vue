@@ -6,7 +6,7 @@ export default {
       loadingStatus: { // 讀取效果
         loadingItem: ''
       },
-      // session 購物車列表
+      // localStorage 的購物車列表
       carData: JSON.parse(localStorage.getItem('carData')) || [],
       cart: { // GET | 購物車 api 列表
         carts: []
@@ -91,9 +91,10 @@ export default {
         }
       })
     },
-    delAllLocalCarts () { // 刪除 localStorage 全部購物車資料 - 後台 Shopping 頁面用
-      this.carData = JSON.parse(localStorage.getItem('carData')) || [] // 清空初始化購物車 localStorage 內容
+    delAllLocalCarts () { // 刪除 localStorage 全部購物車資料 - 後台 Shopping 頁面用、前台 Cart.vue 用
       localStorage.removeItem('carData') // 清空 localStorage 購物車資料
+      // 再重新渲染 localStorage 購物車資料
+      this.carData = JSON.parse(localStorage.getItem('carData')) || [] // 清空初始化購物車 localStorage 內容
       console.log('清空 localStorage 購物車全部內容')
       this.toastTopEnd('購物車商品已全部刪除', 'success')
     },
