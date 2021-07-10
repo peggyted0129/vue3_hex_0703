@@ -127,7 +127,7 @@
             超柔細泡泡， <br>
             不刺激眼睛 !!
           </p>
-          <p class="memo-name"># 嬰兒泡泡浴露</p>
+          <p class="memo-name"># 嬰兒浴露</p>
           <img class="memo-yellow" src="~@/assets/img/yellow.png" alt="memo-yellow">
         </div>
         <div class="memo-wash">
