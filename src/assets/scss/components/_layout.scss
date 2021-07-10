@@ -1,3 +1,4 @@
+
 .navbar { 
   position: fixed;
   z-index: 999;
@@ -55,17 +56,9 @@
   background: $white;
 }
 
-/*  test  */
-.dropdown-menu li:hover .sub-menu {
-  visibility: visible;
-}
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-/*  test  */
-
 .navbar-menu {
-  display: none;
+  height: 0;
+  overflow: hidden;
 }
 @include pad {
   .navbar-menu {
@@ -80,15 +73,9 @@
       }
     }
   }
-  .nav-link:hover ~ .navbar-menu {
+  .nav-item:hover .navbar-menu {
     opacity: 1;
-    display: block;
-    transition: .5s ease-out all;
-    transform: translateY(-20px);
-  }
-  .menuShow { // 用滑鼠事件控制 @mouseover="mouseOver"
-    // opacity: 1;
-    display: block;
+    height: auto;
     transition: .5s ease-out all;
     transform: translateY(-20px);
   }

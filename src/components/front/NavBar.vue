@@ -46,25 +46,13 @@
               </li>
             </ul>
             <!-- 電腦版 -->
-            <!--<ul class="navbar-menu navbar-skin-menu bg-theme p-7 ms-3 d-none d-md-block">-->
-            <ul class="navbar-menu navbar-skin-menu bg-theme p-7 ms-3">
-              <li class="mb-5">
+            <ul class="navbar-menu navbar-skin-menu bg-theme ms-3">
+              <li class="px-7 pt-7">
                 <router-link :to="{ name: 'NewsOne' }">[ 小資美學堂 ] 肌膚 你不知道的奧秘</router-link>
               </li>
-              <li>
+              <li class="mb-7 px-7 pt-7">
                 <a href="#">[ 小資美學堂 ] 肌膚 你不知道的奧秘</a>
               </li>
-            </ul>
-          </li>
-          <!-- test -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="animate__animated animate__slideInUp dropdown-menu dropdown-menu-dark my-0" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
           <li class="nav-item">
