@@ -117,40 +117,42 @@
       </div>
     </div>
     <!-- memo -->
-    <!-- https://www.elle.com/tw/beauty/skin/a27696110/seba-med-summer/ -->
-    <!-- <div class="memo position-relative"> -->
-    <div class="memo d-flex align-items-center mb-md-13 mb-xl-0">
-      <div class="memo-info d-flex align-items-center justify-content-center">
-        <div class="memo-title">
-          <p class="memo-txt">
+    <div class="container-fluid">
+      <div class="memo row flex-column flex-lg-row justify-content-between">
+        <div class="col-12 col-lg-5 col-xxl-5 align-self-start align-self-lg-stretch align-items-lg-center mt-lg-9">
+          <p class="memo-txt text-center text-lg-end">
             <img src="~@/assets/img/new.png" alt="new">
             超柔細泡泡， <br>
             不刺激眼睛 !!
           </p>
-          <p class="memo-name"># 嬰兒浴露</p>
-          <img class="memo-yellow" src="~@/assets/img/yellow.png" alt="memo-yellow">
+          <p class="memo-title text-center text-lg-end">
+            # 嬰兒泡泡浴露
+            <img class="memo-yellow" src="~@/assets/img/yellow.png" alt="memo-yellow">
+          </p>
         </div>
-        <div class="memo-wash">
-          <img class="updown2" src="~@/assets/img/test2.png" alt="">
+        <div class="col-12 col-lg-2 col-xl-3 col-xxl-2 memo-prouct d-flex justify-content-center align-self-start align-self-lg-stretch align-items-lg-center">
+          <img class="updown2" src="~@/assets/img/memo_product.png" alt="">
+        </div>
+        <div class="col-12 col-lg-5 col-xl-4 col-xxl-5 memo-content d-flex justify-content-center align-self-start align-self-lg-stretch align-items-lg-center justify-content-lg-start">
+          <ul>
+            <li class="d-flex align-items-center">
+              <i class="fas fa-chevron-right me-3"></i>
+              <p>洋甘菊萃取精華，舒緩皮膚乾癢</p>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="fas fa-chevron-right me-3"></i>
+              <p>洗頭沐浴一次完成，新手媽媽輕鬆上手</p>
+            </li>
+            <li class="d-flex align-items-center">
+              <i class="fas fa-chevron-right me-3"></i>
+              <p>不流淚配方，保護寶寶嬌嫩淚腺</p>
+            </li>
+          </ul>
         </div>
       </div>
-      <ul class="memo-content">
-        <li>
-          <i class="fas fa-chevron-right me-5"></i>
-          <p>洋甘菊萃取精華，舒緩皮膚乾癢</p>
-        </li>
-        <li>
-          <i class="fas fa-chevron-right me-5"></i>
-          <p>洗頭沐浴一次完成，新手媽媽輕鬆上手</p>
-        </li>
-        <li>
-          <i class="fas fa-chevron-right me-5"></i>
-          <p>不流淚配方，保護寶寶嬌嫩淚腺</p>
-        </li>
-      </ul>
     </div>
     <!-- contact -->
-    <div class="contact-wrap mb-10 mb-md-13">
+    <div class="contact-wrap mb-10 mb-md-13 mt-md-10 mt-lg-0">
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-md-5 contact-left mb-20">
