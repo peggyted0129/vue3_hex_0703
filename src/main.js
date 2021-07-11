@@ -70,8 +70,11 @@ router.beforeEach((to, from, next) => {
         })
       }
     })
-      .catch(err => {
-        console.log(err.response)
+      .catch(() => {
+        // console.log(err.response)
+        next({
+          path: '/login'
+        })
       })
   } else {
     next()

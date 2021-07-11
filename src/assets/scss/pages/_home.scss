@@ -256,7 +256,6 @@
   margin-top: -50px;
 }
 .memo-content {
-  // margin-top: -50px;
   transform: translateY(-40px);
   & li {
     position: relative;
@@ -291,7 +290,6 @@
     }
   }
   .memo-content {
-    // margin-top: 0px;
     transform: translateY(-15px);
     & li:before {
       top: 35px;
@@ -320,10 +318,29 @@
     }
   }
 }
-@include desktop {
+@include pad {
+  .memo-title {
+    & img {
+      left: 260px;
+    }
+  }
+}
+@media(min-width: 890px){
+  .memo-title {
+    & img {
+      left: 320px;
+    }
+  }
+}
+@include desktop { // 992px
   .memo {
     @include banner('~@/assets/img/memo.png', 600px);
     background-size: cover;
+  }
+  .memo-title {
+    & img {
+      left: 150px;
+    }
   }
   .memo-prouct {
     margin-top: -80px;
@@ -332,6 +349,11 @@
 @media(min-width: 1200px){
   .memo-txt, .memo-title {
     padding-left: 150px;
+  }
+  .memo-title {
+    & img {
+      left: 220px;
+    }
   }
   .memo-txt img {
     left: 50px;

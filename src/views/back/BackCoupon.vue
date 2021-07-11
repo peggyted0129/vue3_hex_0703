@@ -25,14 +25,13 @@
             <td>{{ item.code }}</td>
             <td>{{ item.percent }}%</td>
             <td>{{ indate(item.due_date) }}</td>
-            <!-- <td>{{ item.due_date }}</td> -->
             <td>
               <span v-if="item.is_enabled === 1" class="text-success">啟用</span>
               <span v-else class="text-muted">未起用</span>
             </td>
             <td>
               <button class="btn btn-outline-theme btn-sm me-4" @click="openCouponModal(false, item)" type="button">編輯</button>
-              <button class="btn btn-outline-danger btn-sm" @click="delCoupon(item.id)" type="button">刪除</button>
+              <button class="btn btn-outline-danger btn-sm" @click="delModal(item.id)" type="button">刪除</button>
             </td>
           </tr>
         </tbody>
@@ -90,6 +89,24 @@
         </div>
       </div>
     </div>
+    <!-- delModal -->
+    <div class="modal fade" id="delCouponModal" ref="delCouponModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger">
+            <h5 class="modal-title fw-bolder text-white" id="exampleModalLabel">是否刪除此優惠券</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body fw-bolder py-10">
+            請問確認是否刪除此優惠券 ??
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">取消</button>
+            <button type="button" @click="delCoupon" class="btn btn-outline-theme hvr-bounce-to-right">確定刪除</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 <script>
@@ -113,7 +130,8 @@ export default {
       },
       due_date: new Date(),
       pagination: {},
-      isNew: false
+      isNew: false,
+      couponModalId: ''
     }
   },
   computed: {
@@ -179,13 +197,15 @@ export default {
         }
       })
     },
-    delCoupon (id) {
+    delCoupon () {
       const vm = this
-      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/coupon/${id}`
+      const url = `${process.env.VUE_APP_APIPATH}/api/${process.env.VUE_APP_CUSTOMPATH}/admin/coupon/${this.couponModalId}`
       vm.$store.dispatch('updateLoading', true)
       vm.$http.delete(url).then((response) => {
         vm.toastTopEnd(response.data.message, 'success')
         vm.$store.dispatch('updateLoading', false)
+        this.couponModalId = ''
+        this.delModalHide()
         vm.getCoupons()
       })
     },
@@ -194,6 +214,13 @@ export default {
     },
     hideModal () {
       this.modal.hide()
+    },
+    delModal (id) { // delCouponModal
+      this.delmodal.show()
+      this.couponModalId = id
+    },
+    delModalHide () { // delCouponModal
+      this.delmodal.hide()
     },
     toastTopEnd (msg, icon) {
       this.$swal({
@@ -211,6 +238,10 @@ export default {
   },
   mounted () {
     this.modal = new bootstrap.Modal(this.$refs.couponModal, {
+      keyboard: false,
+      backdrop: 'static'
+    })
+    this.delmodal = new bootstrap.Modal(this.$refs.delCouponModal, {
       keyboard: false,
       backdrop: 'static'
     })

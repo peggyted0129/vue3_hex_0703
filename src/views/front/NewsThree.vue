@@ -42,28 +42,30 @@
       </p>
       <ul class="news-buy">
         <li>
-          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc8IZe5SGvvmmtJ8X2e' }}" class="text-sgreen fw-bolder py-2">運動沐浴乳 1000ml / NT. 1050</router-link>
+          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc8IZe5SGvvmmtJ8X2e' }}" target="_blank" class="text-sgreen fw-bolder py-2">運動沐浴乳 1000ml / NT. 1050</router-link>
         </li>
       </ul>
     </div>
     <!---- **************** ---->
     <div class="col-md-6 col-lg-5 mb-7 order-md-2 order-1">
-      <img src="../../assets/img/news/news_one3.jpg" alt="news">
+      <img src="../../assets/img/news/news_th2.png" alt="news">
     </div>
     <div class="col-md-6 col-lg-7 d-flex flex-column order-md-1 order-2 justify-content-center mb-7">
-      <h3 class="text-sgreen fw-bolder">痘淨面皰凝膠</h3>
+      <h3 class="text-sgreen fw-bolder">溫和洗髮乳</h3>
       <p class="h5 fw-bolder my-3">
-        透明凝膠質地，妝前妝後都可以使用， <br>
-        不會造成底妝與凝膠打架哦～
+        幫另一半洗頭，一起健康頭皮，感情也急速加溫 💗🥰<br>
+        無負擔的健康養髮 👉<br>
       </p>
       <p class="news-txt">
-        高詢問度的「痘淨 CP」使用 Montaline ®C40 專利清潔配方，含有椰子油萃取、能有效調理肌膚，煥發水嫩健康零痘肌，是肌膚最溫和的潔顏產品。<br>
-        安全成分PCMX 抗荳因子，添加保濕成分，使用後皮膚不會乾巴巴！ <br>
-        質地是透明凝膠狀，一抹就能被肌膚吸收，不會像有些荳荳膏會形成膠水狀，後續保養或上妝容易搓出屑屑，這一支荳膠即使上完底妝也可以塗擦，不破壞妝容！因為不含酸性成分又搭配植物萃取的舒緩保濕配方，除荳卻不會讓肌膚乾澀脫皮，反而能保濕肌膚，膚觸清爽又舒適！<br>
+        不含矽靈、皂鹼、SLS、藥性、及刺激性成分，<br>
+        以 pH5.5 微酸養護頭皮，就是為了在頭皮形成微酸的保護膜，<br>
+        加強防護力，舒緩陽光、空汙或染燙等化學成分對頭皮的刺激，<br>
+        同時淨化多餘油脂和皮屑，頭皮健康深呼吸，整個好放鬆，<br>
+        就同跟另一半的關係，永遠自在無負擔！<br>
       </p>
       <ul class="news-buy">
         <li>
-          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7xUxcZIEq7NFki1bz' }}" class="text-sgreen fw-bolder py-2">痘淨面皰凝膠 10ml / NT. 320</router-link>
+          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc81bdA1wLzZJiaZG22' }}" target="_blank" class="text-sgreen fw-bolder py-2">溫和洗髮乳 1000ml / NT. 1020</router-link>
         </li>
       </ul>
     </div>
@@ -77,13 +79,10 @@
   <div class="tag text-center mt-5">
     <ul class="d-flex justify-content-center">
       <li>
-        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc8IZe5SGvvmmtJ8X2e' }}" class="tag-link"># 運動沐浴乳</router-link>
+        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc8IZe5SGvvmmtJ8X2e' }}" target="_blank" class="tag-link"># 運動沐浴乳</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7xUxcZIEq7NFki1bz' }}" href="#" class="tag-link"># 痘淨面皰凝膠</router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'ProductDetail', params: { id: '-MdfQsmkOX3905pr97WM' }}" href="#" class="tag-link"># 「痘淨 CP」組合</router-link>
+        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc81bdA1wLzZJiaZG22' }}" target="_blank" class="tag-link"># 溫和洗髮乳</router-link>
       </li>
     </ul>
   </div>

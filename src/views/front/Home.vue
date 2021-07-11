@@ -1,5 +1,9 @@
 <template>
   <header class="home pt-14">
+    <loading v-model:active="isLoading">
+      <img src="https://upload.cc/i1/2021/06/12/N7mIQ1.gif
+  " alt="loading">
+    </loading>
     <!-- 輪播 -->
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -164,7 +168,7 @@
           </div>
           <div class="col-md-7 contact-right mt-3 mt-sm-0">
             <div class="contactPic"></div>
-            <Form class="row contact mx-auto" v-slot="{ errors }">
+            <Form @submit="customer" ref="form" class="row contact mx-auto" v-slot="{ errors }">
               <div class="col-12 mb-5">
                 <Field type="text" class="form-control" id="姓名" name="姓名" :class="{ 'is-invalid': errors['姓名'] }" rules="required" placeholder="請輸入您的姓名或稱號" />
                 <error-message name="姓名" class="invalid-feedback"></error-message>
@@ -185,18 +189,53 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="cuetomerModal" tabindex="-1" aria-labelledby="cuetomerModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-sgray">
+            <h5 class="modal-title fw-bolder" id="cuetomerModal">您的訊息我們收到囉 !!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body fw-bolder py-10">
+            訊息已送出，非常感謝您的聯繫! 我們收到訊息後，近期將會安排與您聯絡。
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-hgray hvr-bounce-to-right" data-bs-dismiss="modal">我知道了</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 </template>
 <script>
+import { mapGetters } from 'vuex'
+import * as bootstrap from 'bootstrap'
+
 export default {
   data () {
     return {
+      cuetomerModal: ''
     }
   },
+  computed: {
+    ...mapGetters(['isLoading'])
+  },
   methods: {
+    customer () {
+      this.$store.dispatch('updateLoading', true)
+      setTimeout(() => {
+        this.$store.dispatch('updateLoading', false)
+        this.cuetomerModal.show()
+        this.$refs.form.resetForm() 
+      }, 1000)
+    }
   },
   mounted () {
-    //
+    this.cuetomerModal = new bootstrap.Modal(document.getElementById('cuetomerModal'), {
+      keyboard: false,
+      backdrop: 'static'
+    })
   }
 }
 </script>

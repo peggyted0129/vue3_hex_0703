@@ -40,7 +40,7 @@
       </p>
       <ul class="news-buy">
         <li>
-          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7vMIXnczt-kv4q9DG' }}" class="text-sgreen fw-bolder py-2">痘淨潔面慕斯 150ml / NT. 480</router-link>
+          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7vMIXnczt-kv4q9DG' }}" target="_blank" class="text-sgreen fw-bolder py-2">痘淨潔面慕斯 150ml / NT. 480</router-link>
         </li>
       </ul>
     </div>
@@ -61,7 +61,7 @@
       </p>
       <ul class="news-buy">
         <li>
-          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7xUxcZIEq7NFki1bz' }}" class="text-sgreen fw-bolder py-2">痘淨面皰凝膠 10ml / NT. 320</router-link>
+          <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7xUxcZIEq7NFki1bz' }}" target="_blank" class="text-sgreen fw-bolder py-2">痘淨面皰凝膠 10ml / NT. 320</router-link>
         </li>
       </ul>
     </div>
@@ -84,7 +84,7 @@
       </p>
       <ul class="news-buy">
         <li>
-          <router-link :to="{ name: 'ProductDetail', params: { id: '-MdfQsmkOX3905pr97WM' }}" class="text-sgreen fw-bolder py-2">痘淨潔面組合 1組 / NT. 680</router-link>
+          <router-link :to="{ name: 'ProductDetail', params: { id: '-MdfQsmkOX3905pr97WM' }}" target="_blank" class="text-sgreen fw-bolder py-2">痘淨潔面組合 1組 / NT. 680</router-link>
         </li>
       </ul>
     </div>
@@ -98,13 +98,13 @@
   <div class="tag text-center mt-5">
     <ul class="d-flex justify-content-center">
       <li>
-        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7vMIXnczt-kv4q9DG' }}" class="tag-link"># 痘淨潔面慕斯</router-link>
+        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7vMIXnczt-kv4q9DG' }}" target="_blank" class="tag-link"># 痘淨潔面慕斯</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7xUxcZIEq7NFki1bz' }}" href="#" class="tag-link"># 痘淨面皰凝膠</router-link>
+        <router-link :to="{ name: 'ProductDetail', params: { id: '-Mc7xUxcZIEq7NFki1bz' }}" target="_blank" class="tag-link"># 痘淨面皰凝膠</router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'ProductDetail', params: { id: '-MdfQsmkOX3905pr97WM' }}" href="#" class="tag-link"># 「痘淨 CP」組合</router-link>
+        <router-link :to="{ name: 'ProductDetail', params: { id: '-MdfQsmkOX3905pr97WM' }}" target="_blank" class="tag-link"># 「痘淨 CP」組合</router-link>
       </li>
     </ul>
   </div>
